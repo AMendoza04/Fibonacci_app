@@ -3,4 +3,12 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+
+
+    <color name="vanilla">#FFF6D5</color>
+    <color name="soft_yellow">#FFCF79</color>
+    <color name="light_green">#92CD00</color>
+    <color name="dark_green">#2C6700</color>
+    <color name="sapphire">#0F528A</color>
 </resources>
