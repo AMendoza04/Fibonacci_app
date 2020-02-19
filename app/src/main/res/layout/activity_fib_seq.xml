@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/vanilla"
     tools:context=".fib_seq">
 
 
@@ -12,13 +13,16 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:text="@string/Fibonacci" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/lvl_fibSeq"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />

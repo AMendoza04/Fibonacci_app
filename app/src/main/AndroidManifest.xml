@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".facto"></activity>
-        <activity android:name=".Blibliografia" />
+        <activity android:name=".Bibliografia" />
         <activity android:name=".fib_seq" />
         <activity android:name=".MainActivity">
             <intent-filter>

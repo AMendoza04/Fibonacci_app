@@ -17,6 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:background="#4DC02626"
         android:text="Factorial"
         android:textColor="#8092CD00"
         android:textSize="25sp" />
