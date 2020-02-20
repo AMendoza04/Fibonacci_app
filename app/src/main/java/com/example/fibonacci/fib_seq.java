@@ -11,4 +11,12 @@ public class fib_seq extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fib_seq);
     }
+
+
+
+    public fib_exe( int num_a , int num_b , int it_p , int it_t)
+    {
+        //addToView( num_b );
+        if()
+    }
 }
