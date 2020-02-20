@@ -22,14 +22,20 @@ public class MainActivity extends AppCompatActivity {
     TextView txt_hFib;
     TextView txt_hFac;
     ImageButton ibtn_bibl;
-    static int contFib;
-    static int contFac;
+    static int contFib = 0;
+    static int contFac = 0;
 
 
     @Override
     public void onResume(){
         super.onResume();
-
+        // put your code here...
+        String aux = "";
+        aux = aux + contFib;
+        txt_numFib.setText(aux);
+        aux = "";
+        aux = aux + contFac;
+        txt_numFac.setText(aux);
 
     }
     @Override
@@ -37,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-        contFac++;
-        contFib++;
+
         setContentView(R.layout.activity_main);
         btn_fac = findViewById( R.id.btn_fac );
         btn_fib = findViewById( R.id.btn_go );
@@ -49,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         txt_numFac = findViewById( R.id.txt_contFac );
         txt_numFib = findViewById( R.id.txt_contFib );
         ibtn_bibl = findViewById( R.id.ibtn_bibl );
+
+
 
         ibtn_bibl.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putInt("iterations",iterationsF);
                 Intent fib_intent = new Intent( v.getContext(), fib_seq.class );
                 fib_intent.putExtras(bundle);
+
+                contFib++;
                 startActivity(fib_intent);
 
             }
@@ -76,11 +85,13 @@ public class MainActivity extends AppCompatActivity {
         btn_fac.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int numFac = (Integer)sp_facNum.getSelectedItem();
+                int numFac = Integer.parseInt(sp_facNum.getSelectedItem().toString());
                 Bundle bundle = new Bundle();
                 bundle.putInt("numFac",numFac);
                 Intent fac_intent = new Intent( v.getContext(), facto.class );
                 fac_intent.putExtras(bundle);
+
+                contFac++;
                 startActivity(fac_intent);
             }
         });
