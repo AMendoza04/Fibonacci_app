@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -72,13 +73,20 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Bundle bundle = new Bundle();
 
-                int iterationsF = Integer.parseInt( et_fibIter.getText().toString().trim() );
-                bundle.putInt("iterations",iterationsF);
-                Intent fib_intent = new Intent( v.getContext(), fib_seq.class );
-                fib_intent.putExtras(bundle);
+                try {
+                    int iterationsF = Integer.parseInt( et_fibIter.getText().toString().trim() );
+                    bundle.putInt("iterations",iterationsF);
+                    Intent fib_intent = new Intent( v.getContext(), fib_seq.class );
+                    fib_intent.putExtra("bundle", bundle);
 
-                contFib++;
-                startActivity(fib_intent);
+                    contFib++;
+                    startActivity(fib_intent);
+                }
+                catch(Exception e)
+                {
+                    Toast.makeText( v.getContext() , "Not valid iterations", Toast.LENGTH_LONG ).show();
+                }
+
 
             }
         });
@@ -89,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putInt("numFac",numFac);
                 Intent fac_intent = new Intent( v.getContext(), facto.class );
-                fac_intent.putExtras(bundle);
+                fac_intent.putExtra("bundle",bundle);
 
                 contFac++;
                 startActivity(fac_intent);

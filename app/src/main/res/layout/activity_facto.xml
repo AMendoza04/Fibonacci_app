@@ -13,12 +13,12 @@
         app:srcCompat="@drawable/gato_fib" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_fibResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#4DC02626"
-        android:text="Factorial"
+        android:text=""
         android:textColor="#8092CD00"
         android:textSize="25sp" />
 </FrameLayout>

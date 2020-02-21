@@ -37,8 +37,8 @@
 
     <ImageButton
         android:id="@+id/ibtn_bibl"
-        android:layout_width="721dp"
-        android:layout_height="373dp"
+        android:layout_width="405dp"
+        android:layout_height="295dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -51,14 +51,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_go"
-        android:entries="@array/fib_it"/>
+        android:entries="@array/fib_it"
+        />
 
     <Button
         android:id="@+id/btn_fac"
         android:layout_width="413dp"
         android:layout_height="55dp"
-        android:text="Factorial"
         android:backgroundTint="@color/sapphire"
+        android:text="Factorial"
         android:textColor="@color/light_green"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
