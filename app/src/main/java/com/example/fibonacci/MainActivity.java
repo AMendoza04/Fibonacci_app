@@ -9,6 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,12 +31,16 @@ public class MainActivity extends AppCompatActivity {
     ImageButton ibtn_bibl;
     static int contFib = 0;
     static int contFac = 0;
-
-
+    static Date currentDnTFib;
+    static Date currentDnTFac;
+    String hFib;
+    String hFac;
     @Override
     public void onResume(){
         super.onResume();
         // put your code here...
+        if( contFac >= 1 ) txt_hFac.setText( hFac );
+        if( contFib >= 1 ) txt_hFib.setText( hFib );
         String aux = "";
         aux = aux + contFib;
         txt_numFib.setText(aux);
@@ -80,6 +90,14 @@ public class MainActivity extends AppCompatActivity {
                     fib_intent.putExtra("bundle", bundle);
 
                     contFib++;
+
+                    String pat = "dd/MM/yyyy HH:mm";
+                    DateFormat df = new SimpleDateFormat(pat);
+
+
+                    currentDnTFib = Calendar.getInstance().getTime();
+                    hFib = df.format( currentDnTFib );
+
                     startActivity(fib_intent);
                 }
                 catch(Exception e)
@@ -100,6 +118,13 @@ public class MainActivity extends AppCompatActivity {
                 fac_intent.putExtra("bundle",bundle);
 
                 contFac++;
+
+                String pat = "dd/MM/yyyy HH:mm";
+                DateFormat df = new SimpleDateFormat(pat);
+
+
+                currentDnTFac = Calendar.getInstance().getTime();
+                hFac = df.format( currentDnTFac );
                 startActivity(fac_intent);
             }
         });

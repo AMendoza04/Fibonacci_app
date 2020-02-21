@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".facto"></activity>
+        <activity android:name=".detallesP"></activity>
+        <activity android:name=".paisesAll" />
+        <activity android:name=".facto" />
         <activity android:name=".Bibliografia" />
         <activity android:name=".fib_seq" />
         <activity android:name=".MainActivity">
