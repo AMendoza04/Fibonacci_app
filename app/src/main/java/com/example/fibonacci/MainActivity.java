@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn_fib;
     Button btn_fac;
+    Button btn_paises;
     EditText et_fibIter;
     Spinner sp_facNum;
     TextView txt_numFib;
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         btn_fac = findViewById( R.id.btn_fac );
         btn_fib = findViewById( R.id.btn_go );
+        btn_paises = findViewById( R.id.btn_paises );
         et_fibIter = findViewById( R.id.et_iterations );
         sp_facNum = findViewById( R.id.sp_fac );
         txt_hFac = findViewById( R.id.txt_hfac );
@@ -126,6 +128,15 @@ public class MainActivity extends AppCompatActivity {
                 currentDnTFac = Calendar.getInstance().getTime();
                 hFac = df.format( currentDnTFac );
                 startActivity(fac_intent);
+            }
+        });
+
+        btn_paises.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent paises_intent = new Intent( v.getContext(), paisesAll.class );
+                startActivity( paises_intent );
             }
         });
     }
